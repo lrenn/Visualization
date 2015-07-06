@@ -8,6 +8,7 @@
 }(this, function(d3, HTMLWidget, AmCharts, I1DChart) {
     function Gauge() {
         HTMLWidget.call(this);
+        this._class = "amchart_Gauge";
         this._tag = "div";
 
         this._chart = {};
@@ -15,7 +16,6 @@
 
     Gauge.prototype = Object.create(HTMLWidget.prototype);
     Gauge.prototype.implements(I1DChart.prototype);
-    Gauge.prototype._class += " amchart_Gauge";
 
     /**
      * Publish Params Common To Other Libraries

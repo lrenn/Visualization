@@ -8,6 +8,7 @@
 }(this, function(d3, CommonSerial, AmCharts, INDChart) {
     function FloatingColumn() {
         CommonSerial.call(this);
+        this._class = "amchart_FloatingColumn";
         this._tag = "div";
 
         this._gType = "column";
@@ -15,7 +16,6 @@
 
     FloatingColumn.prototype = Object.create(CommonSerial.prototype);
     FloatingColumn.prototype.implements(INDChart.prototype);
-    FloatingColumn.prototype._class += " amchart_FloatingColumn";
 
     /**
      * Publish Params Common To Other Libraries

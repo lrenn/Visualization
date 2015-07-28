@@ -86,6 +86,13 @@
             this._paginator.numItems(1);
             this.itemsPerPage(1);
             this._paginator.render();
+        } else {
+            // Also check we we have a paginator, but it hasn't been rendered yet.
+            var paginatorElement = this._paginator.element();
+            if (paginatorElement[0][0] === undefined) {
+                this._paginator.render();
+            }
+
         }
 
         var thHeight = this.calcHeight(th);

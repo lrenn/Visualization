@@ -24,15 +24,16 @@
     var getThemes = function(idx){
         if (typeof g_defaultSerials == 'function') {
             g_defaultThemes(idx); // jshint ignore:line
+            return JSON.parse(localStorage.themeEditorThemes);
         }
-        return JSON.parse(localStorage.themeEditorThemes);
+        return {};
     };
     var getSerials = function(idx){
         if (typeof g_defaultSerials == 'function') {
             g_defaultSerials(idx); // jshint ignore:line
+            return JSON.parse(localStorage.themeEditorSerials);
         }
-
-        return JSON.parse(localStorage.themeEditorSerials);
+        return {};
     };
     var getThemeNames = function(idx){
         var loadedThemes = getThemes();
